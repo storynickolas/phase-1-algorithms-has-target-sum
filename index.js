@@ -1,5 +1,16 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  let hasTarget = false
+  let i = 0
+  while(i < array.length - 2 && hasTarget === false) {
+    array.forEach(element => {
+      if(element + array[i] === target ? true : false) {
+        hasTarget = true
+      }
+    });
+    i++
+  }
+  return hasTarget
 }
 
 /* 
@@ -8,10 +19,16 @@ function hasTargetSum(array, target) {
 
 /* 
   Add your pseudocode here
+  first number === iteration of array ?
+    return true
+  second number === iteration of array starting at 2 ?
+    return true
+  ....
 */
 
 /*
   Add written explanation of your solution here
+  sum of any two numbers in array equal target
 */
 
 // You can run `node index.js` to view these console logs
